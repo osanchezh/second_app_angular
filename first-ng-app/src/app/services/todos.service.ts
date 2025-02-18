@@ -21,6 +21,7 @@ export class TodosService {
   }
   ];*/
   todoItems: Array<Todo>=[];
+  
   getTodosFromApi2(){
     const url=`https://jsonplaceholder.typicode.com/todos`;
     this.http.get<Array<Todo>>(url).subscribe((response:Array<Todo>)=>{
@@ -31,5 +32,6 @@ export class TodosService {
     const url = `https://jsonplaceholder.typicode.com/todos`;
     return this.http.get<Array<Todo>>(url);
   }
+  
   constructor() { }
 }
