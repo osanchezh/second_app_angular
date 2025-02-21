@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=RNr1QZM4A38
+https://github.com/thisiszoaib/angular-ecommerce/blob/master/src/app/pages/products-list/products-list.component.ts
