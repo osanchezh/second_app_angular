@@ -7,7 +7,9 @@ import { RouterOutlet } from '@angular/router';
 //import './topics/05-destructuring';
 //import './topics/06-impexp';
 
-import './topics/07-classes';
+//import './topics/07-classes';
+
+import './topics/08-generictypes';
 @Component({
   selector: 'app-root',
   standalone: true,

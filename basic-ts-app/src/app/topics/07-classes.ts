@@ -1,3 +1,4 @@
+import { IAction } from "./utils/actions.interface";
 
 class Person{
     name: string;
@@ -25,9 +26,32 @@ class Person{
     }
 }
 
+
 const juan = new Person('Juan', 'Perez', 20);
 
 console.log(juan);
 juan.walk();
 juan.talk();
+
+
+class Astronauta extends Person implements IAction{
+    numeroMaestrias: number;
+    constructor(name:string, lastName:string, age:number, numeroMaestrias:number){
+        super(name, lastName, age);
+        this.numeroMaestrias = numeroMaestrias;
+    }
+    pilotShip(): void {
+        console.log(this.fullName+' pilot ship');
+    }
+    getFullName():string{
+        return this.fullName;
+    }
+}
+
+const astronauta = new Astronauta('Juan', 'Perez', 20, 1);
+
+console.log("astonauta:"+JSON.stringify(astronauta));
+console.log(astronauta);
+console.log(astronauta.getFullName());
+astronauta.pilotShip();
 export {};
