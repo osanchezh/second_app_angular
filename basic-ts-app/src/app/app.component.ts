@@ -10,10 +10,12 @@ import { RouterOutlet } from '@angular/router';
 //import './topics/07-classes';
 
 import './topics/08-generictypes';
+import { LikeComponent } from "./like/like.component";
+import { UserFormComponent } from "./user-form/user-form.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, LikeComponent, UserFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
