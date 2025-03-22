@@ -1,32 +1,3 @@
-<!-- EJEMPLO PARA DIRECTIVAS DE ATRIBUTOS -->
-
-<!-- --> <div class="container">
-	<h1 class="container__title">Lista de Tareas</h1>
-	<div
-		class="task"
-		[ngClass]="{ 'task--completed': task.status === 'COMPLETED', 'task--progress': task.status === 'PROGRESS' }"
-	>
-		<p [ngStyle]="{ color: colorText }">{{ task.task }}</p>
-		<img *ngIf="task.status==='COMPLETED'" class="task__icon" src="assets/icons/status-completed.png" alt="completado" />
-
-		<section>
-			<select class="task__status" (change)="changeStatus1()" [(ngModel)]="task.status">
-				<option value="COMPLETED" [selected]="task.status === 'COMPLETED'">Completado</option>
-				<option value="PROGRESS" [selected]="task.status === 'PROGRESS'">En progreso</option>
-				<option value="PENDING" [selected]="task.status === 'PENDING'">Pendiente</option>
-			</select>
-
-			<select>
-				<option value="HIGH" [selected]="task.priority === 'HIGH'">Alta</option>
-				<option value="MEDIUM" [selected]="task.priority === 'MEDIUM'">Media</option>
-				<option value="LOW" [selected]="task.priority === 'LOW'">Baja</option>
-			</select>
-		</section>
-	</div>
-</div> 
-
-<!-- EJEMPLO PARA DIRECTIVAS ESTRUCTURALES--> 
-
 <div class="container">
 	<h1 class="container__title">Lista de Tareas</h1>
 	<section>
@@ -51,7 +22,6 @@
 		<ng-template #taskImage>
 			<img class="task__icon" src="assets/icons/status-pending.png" />
 		</ng-template>
-		
 		<!-- SI NO UTILIZAR EL trackBy, EL ELEMENTO VOLVERA A RENDERIZARCE -->
 		<!-- <app-task /> -->
 
@@ -74,4 +44,3 @@
 		</ng-container>
 	</div>
 </div>
-
