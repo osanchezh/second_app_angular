@@ -30,6 +30,6 @@ export class PokemonsComponent {
 	}
 
 	clickRestore(): void {
-		this.pokemons = POKEMONS;
+		this.pokemons = [...POKEMONS];
 	}
 }
